@@ -1,0 +1,20 @@
+print("KHAO SAT NHANH LICH TRINH DI CHUYEN")
+s=''
+while True:
+    ht=input("Nhap HO va TEN(CHU IN HOA khong dau):\n").split()
+    ht=s.join(ht)
+    if ht.isupper():
+        break
+while True:
+    sdt=input("Nhap so dien thoai lien lac:\n").split()
+    sdt=s.join(sdt)
+    if sdt.isdigit():
+        break
+while True:
+    cmnd=input("Nhap so cccd/cmnd:\n").split()
+    cmnd=s.join(cmnd)
+    if cmnd.isdigit():
+        break
+pt=input("Phuong tien di chuyen:\n(O to gia dinh, Xe khach/Xe du lich, Xe may, Xe tho so, Phuong tien khac(ghi cu the)\n").split()
+bks=input("Nhap bien kiem soat phuong tien:\n")
+xp=input("Noi khoi hanh(ghi cu the-thon/xom, xa, huyen,...)\n")
