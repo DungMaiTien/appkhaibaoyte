@@ -18,3 +18,5 @@ while True:
 pt=input("Phuong tien di chuyen:\n(O to gia dinh, Xe khach/Xe du lich, Xe may, Xe tho so, Phuong tien khac(ghi cu the)\n").split()
 bks=input("Nhap bien kiem soat phuong tien:\n")
 xp=input("Noi khoi hanh(ghi cu the-thon/xom, xa, huyen,...)\n")
+
+chưa xong! tu bi con từn niu
