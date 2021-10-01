@@ -1,22 +1,56 @@
-print("KHAO SAT NHANH LICH TRINH DI CHUYEN")
-s=''
-while True:
-    ht=input("Nhap HO va TEN(CHU IN HOA khong dau):\n").split()
-    ht=s.join(ht)
-    if ht.isupper():
-        break
-while True:
-    sdt=input("Nhap so dien thoai lien lac:\n").split()
-    sdt=s.join(sdt)
-    if sdt.isdigit():
-        break
-while True:
-    cmnd=input("Nhap so cccd/cmnd:\n").split()
-    cmnd=s.join(cmnd)
-    if cmnd.isdigit():
-        break
-pt=input("Phuong tien di chuyen:\n(O to gia dinh, Xe khach/Xe du lich, Xe may, Xe tho so, Phuong tien khac(ghi cu the)\n").split()
-bks=input("Nhap bien kiem soat phuong tien:\n")
-xp=input("Noi khoi hanh(ghi cu the-thon/xom, xa, huyen,...)\n")
+from tkinter import *
+from tkinter import messagebox
+def hdsd():
+    messagebox.showinfo(title='Hướng dẫn sử dụng',message='1: Vui lòng nhập theo yêu cầu của ứng dụng\n2: Khai báo thông tin phải chính xác\n3: Chọn vấn đề bạn đang mắc phải \n4:Phải xác khai báo')
+def nhietdo():
+    messagebox.showinfo(title='Thông báo',message='Nhiệt độ của bạn đang ở mức ổn định\nhãy chú ý sức khỏe để phòng chống dịch bệnh và thực hiện thông điệp 5K từ bộ Y Tế')
+def nhietdo2():
+    messagebox.showinfo(title='Thông báo',message='Bạn Đang bị sốt, có nguy cơ mắc bệnh cao ,.....')
+ROOF = Tk()
+ROOF.geometry('1300x1000')
+ROOF.title('KHAI BAO Y TE VA CHAM SOC BENH NHAN')
+ROOF.configure(bg='lavender')
+Button(ROOF, text='Hướng dẫn sử dụng',bg='skyblue',command=hdsd).grid(row=0,column=0)
+Button(ROOF, text='Gửi ',bg='skyblue').grid(row=0,column=1)
+Label(ROOF, text='Họ và Tên:',bg='limegreen').grid(row=1,column=0)
+Label(ROOF, text='Số CCCD/CMND:',bg='limegreen').grid(row=2,column=0)
+Label(ROOF, text='Số điện thoại liên lạc:',bg='limegreen').grid(row=3,column=0)
+Label(ROOF, text='Địa chỉ thường trú:',bg='limegreen').grid(row=4,column=0)
+Label(ROOF, text='Phương Tiện di chuyển:',bg='limegreen').grid(row=5,column=0)
+Label(ROOF, text='Biển kiểm soát phương tiện:',bg='limegreen').grid(row=6,column=0)
+Label(ROOF, text='Nơi đến:',bg='limegreen').grid(row=7,column=0)
+Label(ROOF, text='Nơi ở hiện tại(ghi rõ):',bg='limegreen').grid(row=8,column=0)
+Label(ROOF, text='Trong 21 ngày qua bạn có đi đến vùng dịch không?',bg='limegreen').grid(row=9,column=0)
+Label(ROOF, text='Bạn có biểu hiện sốt, ho, khó thở không??',bg='limegreen').grid(row=10,column=0)
+Label(ROOF, text='Lần đo thân nhiệt gần đây nhất của bạn là bao nhiêu?',bg='lavender').grid(row=11,column=0)
+Button(ROOF, text='Nhiệt độ  <38°C',bg='skyblue',command=nhietdo).grid(row=12,column=0)
+Button(ROOF, text='Nhiệt độ  >= 38°C',bg='skyblue',command=nhietdo2).grid(row=13,column=0)
+Label(ROOF, text='THÔNG ĐIỆP 5K:',bg='orange').grid(row=14,column=0)
+Label(ROOF, text='1 – KHẨU TRANG: Đeo khẩu trang vải thường xuyên tại nơi công cộng, nơi tập trung đông người\nÐeo khẩu trang y tế tại các cơ sở y tế, khu cách ly.',bg='lavender').grid(row=15,column=0)
+Label(ROOF, text='2 – KHỬ KHUẨN: Rửa tay thường xuyên bằng xà phòng hoặc dung dịch sát khuẩn tay\nVệ sinh các bề mặt/ vật dụng thường xuyên tiếp xúc (tay nắm cửa, điện thoại, máy tính bảng, mặt bàn, ghế…)\nGiữ vệ sinh, lau rửa và để nhà cửa thông thoáng.:',bg='lavender').grid(row=16,column=0)
+Label(ROOF, text='3 – KHOẢNG CÁCH: Giữ khoảng cách khi tiếp xúc với người khác.:',bg='lavender').grid(row=17,column=0)
+Label(ROOF, text='4 – KHÔNG TỤ TẬP đông người',bg='lavender').grid(row=18,column=0)
+Label(ROOF, text='5 – KHAI BÁO Y TẾ: thực hiện khai báo y tế trên App NCOVI; cài đặt ứng dụng BlueZone tại địa chỉ\n https://www.bluezone.gov.xn--vn-rma2251a/ được cảnh báo nguy cơ lây nhiễm COVID',bg='lavender').grid(row=19,column=0)
+Label(ROOF, text='Lời Khuyên của Bác Sỹ để tự chăm sóc bản thân:',bg='orange').grid(row=20,column=0)
+username = Entry(ROOF, width=30)
+username.grid(row=1, column=1)
+cmnd = Entry(ROOF, width=30)
+cmnd.grid(row=2, column=1)
+sdt = Entry(ROOF, width=30)
+sdt.grid(row=3, column=1)
+dc = Entry(ROOF, width=30)
+dc.grid(row=4, column=1)
+pt = Entry(ROOF, width=30)
+pt.grid(row=5, column=1)
+bks = Entry(ROOF, width=30)
+bks.grid(row=6, column=1)
+nd = Entry(ROOF, width=30)
+noht = Entry(ROOF, width=30)
+haimot = Entry(ROOF, width=30)
+bh = Entry(ROOF, width=30)
+nd.grid(row=7, column=1)
+noht.grid(row=8, column=1)
+haimot.grid(row=9, column=1)
+bh.grid(row=10, column=1)
+ROOF.mainloop()
 
-chưa xong! tu bi con từn niu
