@@ -1,11 +1,11 @@
 from tkinter import *
 from tkinter import messagebox
 def hdsd():
-    messagebox.showinfo(title='Hướng dẫn sử dụng',message='1: Vui lòng nhập theo yêu cầu của ứng dụng\n2: Khai báo thông tin phải chính xác\n3: Chọn vấn đề bạn đang mắc phải \n4:Phải xác khai báo')
+    messagebox.showinfo(title='Hướng dẫn sử dụng',message='1: Vui lòng nhập theo yêu cầu của ứng dụng\n2: Khai báo thông tin phải chính xác\n3: Chọn vấn đề bạn đang mắc phải \n4:Hoàn thành phải ấn gửi')
 def nhietdo():
     messagebox.showinfo(title='Thông báo',message='Nhiệt độ của bạn đang ở mức ổn định\nhãy chú ý sức khỏe để phòng chống dịch bệnh và thực hiện thông điệp 5K từ bộ Y Tế')
 def nhietdo2():
-    messagebox.showinfo(title='Thông báo',message='Bạn Đang bị sốt, có nguy cơ mắc bệnh cao ,.....')
+    messagebox.showinfo(title='Thông báo',message='Bạn Đang bị sốt có nguy cơ mắc bệnh cao \nỞ nhà trừ khi cần được chăm sóc y tế\nTách bản thân khỏi những người khác\nTheo dõi các triệu chứng của quý vị\nGọi điện trước khi đến gặp bác sĩ của quý vị\nTiến hành xét nghiệm\nHãy đeo khẩu trang che mũi và miệng\nChe miệng khi ho hoặc hắt hơi\nRửa tay thường xuyên\nTránh dùng chung đồ dùng cá nhân\nLàm sạch tất cả các bề mặt "hay chạm vào" hàng ngày,')
 ROOF = Tk()
 ROOF.geometry('1300x1000')
 ROOF.title('KHAI BAO Y TE VA CHAM SOC BENH NHAN')
@@ -30,8 +30,11 @@ Label(ROOF, text='1 – KHẨU TRANG: Đeo khẩu trang vải thường xuyên t
 Label(ROOF, text='2 – KHỬ KHUẨN: Rửa tay thường xuyên bằng xà phòng hoặc dung dịch sát khuẩn tay\nVệ sinh các bề mặt/ vật dụng thường xuyên tiếp xúc (tay nắm cửa, điện thoại, máy tính bảng, mặt bàn, ghế…)\nGiữ vệ sinh, lau rửa và để nhà cửa thông thoáng.:',bg='lavender').grid(row=16,column=0)
 Label(ROOF, text='3 – KHOẢNG CÁCH: Giữ khoảng cách khi tiếp xúc với người khác.:',bg='lavender').grid(row=17,column=0)
 Label(ROOF, text='4 – KHÔNG TỤ TẬP đông người',bg='lavender').grid(row=18,column=0)
-Label(ROOF, text='5 – KHAI BÁO Y TẾ: thực hiện khai báo y tế trên App NCOVI; cài đặt ứng dụng BlueZone tại địa chỉ\n https://www.bluezone.gov.xn--vn-rma2251a/ được cảnh báo nguy cơ lây nhiễm COVID',bg='lavender').grid(row=19,column=0)
-Label(ROOF, text='Lời Khuyên của Bác Sỹ để tự chăm sóc bản thân:',bg='orange').grid(row=20,column=0)
+Label(ROOF, text='5 – KHAI BÁO Y TẾ: thực hiện khai báo y tế trên App NCOVI; cài đặt ứng dụng BlueZone tại địa chỉ\n https://www.bluezone.gov.xn--vn-rma2251a/ ',bg='lavender').grid(row=19,column=0)
+Label(ROOF, text='Lời Khuyên của Bác Sỹ để tự chăm sóc bản thân:',bg='orange').grid(row=14,column=1)
+Label(ROOF, text='*Điều quan trọng nhất bạn phải làm lúc này là \nlàm theo những yêu cầu hoặc hướng dẫn của bác sĩ, nhân viên y tế và\n quy định của nơi cách ly bạn đang ở để an toàn cho bạn và cho cả cộng đồng ',bg='lavender').grid(row=15,column=1)
+Label(ROOF, text='Dậy sớm và ăn sáng đầy đủ\nTập các bài thể dục vui nhộn\nTìm đọc thứ gì đó thú vị, hài hước\nGiao tiếp với bạn bè (thông qua các kênh trực tuyến bạn thường dùng)\nChuyển lời động viên tích cực đến những người bạn cũng đang cảm thấy cô đơn\nTham gia các lớp học trực tuyến\nKhông bỏ bữa trưa và bữa tối...',bg='lavender').grid(row=16,column=1)
+
 username = Entry(ROOF, width=30)
 username.grid(row=1, column=1)
 cmnd = Entry(ROOF, width=30)
@@ -53,4 +56,3 @@ noht.grid(row=8, column=1)
 haimot.grid(row=9, column=1)
 bh.grid(row=10, column=1)
 ROOF.mainloop()
-
