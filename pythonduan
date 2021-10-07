@@ -1,7 +1,6 @@
 from tkinter import *
 from tkinter import messagebox
 from selenium import webdriver
-from PIL import ImageTk, Image
 def guitt():
     hoten = username.get()
     dates = date.get()
@@ -28,6 +27,9 @@ def guitt():
     driver.find_element_by_xpath('/html/body/div[1]/div[2]/form/div[2]/div/div[2]/div[10]/div/div/div[2]/div/div[1]/div/div[1]/input').send_keys(trong21ngay)
     driver.find_element_by_xpath('/html/body/div[1]/div[2]/form/div[2]/div/div[2]/div[11]/div/div/div[2]/div/div[1]/div/div[1]/input').send_keys(bieuhien)
     driver.find_element_by_xpath('/html/body/div[1]/div[2]/form/div[2]/div/div[3]/div[1]/div[1]/div/span/span').click()
+def thongke():
+    driver = webdriver.Chrome()
+    driver.get('https://suckhoedoisong.qltns.mediacdn.vn/324455921873985536/2021/9/2/ca-moi-toi-2-16305816686061490845985.jpeg')
 def hdsd():
     messagebox.showinfo(title='Hướng dẫn sử dụng',message='1: Vui lòng nhập theo yêu cầu của ứng dụng\n2: Khai báo thông tin phải chính xác\n3: Chọn vấn đề bạn đang mắc phải \n4:Hoàn thành và ấn Tiếp Tục\n5:Xác Nhận lại khai báo và ấn gửi')
 def nhietdo():
@@ -46,8 +48,11 @@ def hvi():
     messagebox.showinfo(title='Vi phạm pháp luật ',message='Phạt tiền từ 1.000.000 đồng đến 3.000.000 đồng đối với một trong các hành vi sau đây\n Không thực hiện biện pháp bảo vệ cá nhân đối với người tham gia chống dịch và người có nguy cơ mắc bệnh dịch theo hướng dẫn của cơ quan y tế.\nHành vi vứt khẩu trang đã sử dụng tại nơi công cộng bị xử phạt vi phạm hành chính theo quy định tại Khoản 1 Điều 20 Nghị định số 155/2016/NĐ-CP ngày 18/11/2016 của Chính phủ quy định về xử phạt vi phạm hành chính trong lĩnh vực môi trường.\nPhạt tiền từ 5.000.000đ đến 10.000.000đ đối với người có hành vi che dấu tình trạng bệnh của mình hoặc của người khác khi mắc bệnh Covid-19 theo quy định tại điểm a khoản 2 Điều 12 Nghị định số 117/2020/NĐ-CP ngày 28/9/2020 của Chính phủ quy định về xử phạt vi phạm hành chính trong lĩnh vực y tế...\nPhạt tiền từ 10.000.000đ đến 20.000.000đ đối với người có hành vi che giấu, không khai báo hoặc khai báo không kịp thời hiện trạng bệnh Covid-19 của bản thân hoặc của người khác mắc bệnh theo điểm a khoản 3 Điều 7 Nghị định số 117/2020/NĐ-CP ngày 28/9/2020 của Chính phủ quy định về xử phạt vi phạm hành chính trong lĩnh vực y tế')
 def ll():
     messagebox.showinfo(title='Vi phạm pháp luật ',message='COVID-19 lây lan khi người nhiễm bệnh thở ra các giọt bắn và các hạt rất nhỏ có chứa vi-rút. Những giọt bắn và hạt này có thể bị người khác hít vào hoặc rơi vào mắt, mũi hoặc miệng của họ. Trong một số trường hợp, họ có thể gây ô nhiễm các bề mặt họ chạm vào.\nTốc độ lây lan theo cấp số nhân, theo nhận định cứ 1 người thì khả năng lây lan thêm cho 8 người')
+def baiviet():
+    driver = webdriver.Chrome()
+    driver.get('https://www.bienphong.com.vn/nhung-cau-chuyen-cam-dong-trong-khu-cach-ly-post442377.html')
 ROOF = Tk()
-ROOF.geometry('1200x900')
+ROOF.geometry('800x500')
 ROOF.title('KHAI BAO Y TE VA CHAM SOC BENH NHAN')
 ROOF.configure(bg='lavender')
 Button(ROOF, text='Hướng dẫn sử dụng',bg='skyblue',command=hdsd).grid(row=0,column=0)
@@ -64,21 +69,22 @@ Label(ROOF, text='Nơi ở hiện tại(ghi rõ):',bg='lavender').grid(row=9,col
 Label(ROOF, text='Trong 21 ngày qua bạn có đi đến vùng dịch không?',bg='lavender').grid(row=10,column=0)
 Label(ROOF, text='Bạn có biểu hiện sốt, ho, khó thở không??',bg='lavender').grid(row=11,column=0)
 Label(ROOF, text='Lần đo thân nhiệt gần đây nhất của bạn là bao nhiêu?',bg='lavender').grid(row=0,column=2)
-Button(ROOF, text='Nhiệt độ  <38°C',bg='skyblue',command=nhietdo).grid(row=1,column=2)
+Button(ROOF, text='Nhiệt độ  < 38°C  ',bg='skyblue',command=nhietdo).grid(row=1,column=2)
 Button(ROOF, text='Nhiệt độ  >= 38°C',bg='skyblue',command=nhietdo2).grid(row=2,column=2)
 Label(ROOF, text='Độ tuổi của bạn bao nhiêu?',bg='lavender').grid(row=3,column=2)
 Label(ROOF, text='Xem thêm chi tiết: ',bg='lavender').grid(row=12,column=0)
 Button(ROOF, text='Thông Điệp 5K',bg='skyblue',command=td).grid(row=13,column=0)
 Label(ROOF, text='Biểu đồ ca mắc Covid-19(7 Ngày gần đây): ',bg='lavender').grid(row=14,column=1)
 Button(ROOF, text='Khuyến Cáo của BYT',bg='skyblue',command=kc).grid(row=14,column=0)
-Button(ROOF, text='Ít hơn 18 tuổi',bg='skyblue',command=trec).grid(row=4,column=2)
+Button(ROOF, text=' Ít hơn 18 tuổi ',bg='skyblue',command=trec).grid(row=4,column=2)
 Button(ROOF, text='Lớn hơn 18 tuổi',bg='skyblue',command=nlon).grid(row=5,column=2)
 Label(ROOF, text='Một số hành vi vi phạm pháp luật',bg='lavender').grid(row=6,column=2)
 Button(ROOF, text='Hành Vi & Mức Phạt',bg='skyblue',command=hvi).grid(row=7,column=2)
 Label(ROOF, text='Mức độ lây lan(phép toán)',bg='lavender').grid(row=8,column=2)
 Button(ROOF, text='Lây Lan',bg='skyblue',command=ll).grid(row=9,column=2)
-img = ImageTk.PhotoImage(Image.open('D:/qa.png'))
-imglabel = Label(ROOF, image=img).grid(row=17, column=1)
+Label(ROOF, text='Bài viết: ',bg='lavender').grid(row=10,column=2)
+Button(ROOF, text='Bài viết',bg='skyblue',command=baiviet).grid(row=11,column=2)
+Button(ROOF, text='Biểu đồ',bg='skyblue',command=thongke).grid(row=15,column=1)
 username = Entry(ROOF, width=30)
 username.grid(row=1, column=1)
 date = Entry(ROOF, width=30)
